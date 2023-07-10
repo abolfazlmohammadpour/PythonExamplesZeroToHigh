@@ -2,12 +2,10 @@ Number = int(0)
 FactorilOfNumber = int(0)
 
 def GenerateFactorial(Number: int):
-    FactorilOfNumber = int(1)
-
-    for Counter in range(1, (Number + 1), 1):
-        FactorilOfNumber = (FactorilOfNumber * Counter)
-
-    return FactorilOfNumber
+    if Number <= 0:
+        return 1
+    else:
+        return (Number * GenerateFactorial((Number - 1)))
 
 
 
